@@ -1,0 +1,7 @@
+package main
+
+
+func a() {
+	a := database.Measurements{}
+	println(a)
+}

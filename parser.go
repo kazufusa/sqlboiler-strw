@@ -18,7 +18,7 @@ type Model struct {
 
 type Column struct {
 	WhereName string
-	Name      string
+	FieldName string
 	Type      string
 }
 
@@ -53,7 +53,7 @@ func Parse(file string) (Model, error) {
 							}
 							m.Columns = append(m.Columns, Column{
 								WhereName: n.Names[0].Name,
-								Name:      tags.Tags()[0].Name,
+								FieldName: tags.Tags()[0].Name,
 								Type:      t,
 							})
 						}
